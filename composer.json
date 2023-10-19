@@ -1,19 +1,20 @@
 {
-    "name": "masterskill/custom-router",
-    "description": "It's a package that can create new route on Laravel, based on its parameters. Like we have api, web, we can now easily configure this with custom-router",
-    "type": "metapackage",
-    "require": {
-        "laravel/framework": "^9"
-    },
-    "autoload": {
-        "psr-4": {
-            "Masterskill\\CustomRouter\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Clairmont RAJAONARISON",
-            "email": "clairmont.rajaonarison@gmail.com"
-        }
-    ]
+	"name": "masterskill/custom-router",
+	"description": "It's a package that can create new route on Laravel, based on its parameters. Like we have api, web, we can now easily configure this with custom-router",
+	"type": "metapackage",
+	"require": {
+		"laravel/framework": ">=9",
+		"php": ">=8"
+	},
+	"autoload": {
+		"psr-4": {
+			"Masterskill\\CustomRouter\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Clairmont RAJAONARISON",
+			"email": "clairmont.rajaonarison@gmail.com"
+		}
+	]
 }
