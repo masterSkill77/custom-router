@@ -56,7 +56,7 @@ class MakeRouter extends Command
         });
         ";
 
-        $filePath = base_path('routes') . $filename . '.php';
+        $filePath = base_path('routes/') . $filename . '.php';
         if (file_put_contents($filePath, $content)) {
             $this->info("The router $filePath has been created successfully.");
 
