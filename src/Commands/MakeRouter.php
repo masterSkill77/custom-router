@@ -26,6 +26,8 @@ class MakeRouter extends Command
             ['api', 'web'],
             0
         );
+
+        $this->createFile($filename, $prefix, $middleware);
     }
 
     /**
