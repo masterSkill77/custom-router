@@ -82,8 +82,7 @@ class MakeRouter extends Command
             ->group(base_path('routes/$className.php'));
         ";
 
-        $position = strpos($routeServiceProviderContent, "Route::middleware('web')
-        ->group(base_path('routes/web.php'));");
+        $position = strpos($routeServiceProviderContent, "(base_path('routes/web.php'));");
 
         if ($position !== false) {
             // Insert the binding just before the class definition
