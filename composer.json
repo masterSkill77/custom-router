@@ -2,6 +2,7 @@
 	"name": "masterskill/custom-router",
 	"description": "It's a package that can create new route on Laravel, based on its parameters. Like we have api, web, we can now easily configure this with custom-router",
 	"type": "metapackage",
+	"license": "GPL-2.0-or-later",
 	"require": {
 		"laravel/framework": ">=9",
 		"php": ">=8"
@@ -16,5 +17,12 @@
 			"name": "Clairmont RAJAONARISON",
 			"email": "clairmont.rajaonarison@gmail.com"
 		}
-	]
+	],
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Masterskill\\ServicePackage\\MakeServiceProvider"
+			]
+		}
+	}
 }
