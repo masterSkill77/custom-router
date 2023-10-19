@@ -60,7 +60,7 @@ class MakeRouter extends Command
         if (file_put_contents($filePath, $content)) {
             $this->info("The router $filePath has been created successfully.");
 
-            $this->addToRouteServiceProvider($filePath, $prefix, $middleware);
+            $this->addToRouteServiceProvider($filename, $prefix, $middleware);
 
             $this->info("Enjoy your development :)");
         } else {
@@ -68,7 +68,7 @@ class MakeRouter extends Command
         }
     }
 
-    protected function addToRouteServiceProvider(string $className, string $prefix, string $middleware)
+    protected function addToRouteServiceProvider(string $filename, string $prefix, string $middleware)
     {
         // Get the content of RouteServiceProvider
         $routeServiceProviderPath = app_path('Providers/RouteServiceProvider.php');
@@ -76,10 +76,9 @@ class MakeRouter extends Command
 
         // Define the route binding
         $binding = "
-        Route::middleware('web')
-            ->namespace(\$this->namespace)
+        Route::middleware('$middleware')
             ->prefix('$prefix')
-            ->group(base_path('routes/$className.php'));
+            ->group(base_path('routes/$filename.php'));
         ";
 
         $position = strpos($routeServiceProviderContent, "(base_path('routes/web.php'));");
