@@ -5,7 +5,7 @@ namespace Masterskill\CustomRouter;
 use Illuminate\Support\ServiceProvider;
 use Masterskill\CustomRouter\Commands\MakeRouter;
 
-class MakeRouterServiceProvider extends ServiceProvider
+class MakeRouterProvider extends ServiceProvider
 {
     public function register()
     {
