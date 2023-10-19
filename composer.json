@@ -21,7 +21,7 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Masterskill\\ServicePackage\\MakeServiceProvider"
+				"Masterskill\\CustomRouter\\MakeRouterProvider"
 			]
 		}
 	}
