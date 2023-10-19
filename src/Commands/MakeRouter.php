@@ -75,7 +75,7 @@ class MakeRouter extends Command
         $routeServiceProviderContent = File::get($routeServiceProviderPath);
 
         // Define the route binding
-        $binding = "
+        $binding = "\n
         Route::middleware('$middleware')
             ->prefix('$prefix')
             ->group(base_path('routes/$filename.php'));
@@ -85,7 +85,7 @@ class MakeRouter extends Command
 
         if ($position !== false) {
             // Insert the binding just before the class definition
-            $routeServiceProviderContent = substr_replace($routeServiceProviderContent, $binding, $position, 0);
+            $routeServiceProviderContent = substr_replace($routeServiceProviderContent, $binding, strlen($routeServiceProviderContent));
         }
 
         // Save the modified content back to the RouteServiceProvider
