@@ -52,7 +52,7 @@ class MakeRouter extends Command
         */
 
         Route::get('test', function(){
-            return response()->json('It works');
+            return response()->json({message : 'It works'});
         });
         ";
 
