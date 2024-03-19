@@ -4,7 +4,7 @@
 	"type": "library",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"laravel/framework": ">=9",
+		"laravel/framework": ">=9 <11",
 		"php": ">=8"
 	},
 	"autoload": {

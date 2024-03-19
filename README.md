@@ -5,6 +5,7 @@ It's a package that can create new route on Laravel, based on its parameters. Li
 ## Prerequisites
 
 - Laravel framework: ">=9.0"
+- Laravel framework: "< 11.0"
 - PHP: ">=8.0"
 
 ## Installation
